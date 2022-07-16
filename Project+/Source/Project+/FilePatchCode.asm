@@ -265,6 +265,44 @@ string "/menu2/sc_title.pac"     @ $806FF9A0
 string "/menu2/mu_menumain.pac"  @ $806FB248
 string "/menu2/if_adv_mngr.pac"  @ $80B2C7F8
 
+###############################################################
+Set menus based on Code Menu Stagelist setting [Bird]
+###############################################################
+* 20523400 00000000 # If 80523400 is 0 (Theatre)
+string "stageslotthe/"                  @ $80550C98
+string "stageinfothe/"                  @ $80550CA8
+string "/menu2/sc_selmap.pac"           @ $806FF3F0
+string "sc_selmap_en.pac"               @ $817F637C
+* E0000000 80008000
+
+* 20523400 00000001 # If 80523400 is 1 (PMBR)
+string "stageslot/"                     @ $80550C98
+string "stageinfo/"                     @ $80550CA8
+string "/menu2/sc_selmap.pac"           @ $806FF3F0
+string "sc_selmap_en.pac"               @ $817F637C
+* E0000000 80008000
+
+* 20523400 00000002 # If 80523400 is 2 (ILPM)
+string "stageslotilpm/"                 @ $80550C98
+string "stageinfoilpm/"                 @ $80550CA8
+string "/menu2/il_selmap.pac"           @ $806FF3F0
+string "il_selmap_en.pac"               @ $817F637C
+* E0000000 80008000
+
+* 20523400 00000003 # If 80523400 is 3 (NY)
+string "stageslotny/"                   @ $80550C98
+string "stageinfony/"                   @ $80550CA8
+string "/menu2/ny_selmap.pac"           @ $806FF3F0
+string "ny_selmap_en.pac"               @ $817F637C
+* E0000000 80008000
+
+* 20523400 00000004 # If 80523400 is 4 (MA)
+string "stageslotma/"                   @ $80550C98
+string "stageinfoma/"                   @ $80550CA8
+string "/menu2/ma_selmap.pac"           @ $806FF3F0
+string "ma_selmap_en.pac"               @ $817F637C
+* E0000000 80008000
+
 ##############################################################################################################################
 [Project+] RSBE v1.30 (/Project+/pf/sfx, can load soundbank clones for stages) (requires CSSLE) [InternetExplorer, DukeItOut]
 ##############################################################################################################################
