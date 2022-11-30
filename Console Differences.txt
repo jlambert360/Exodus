@@ -1,0 +1,11 @@
+KingBird/BOOST.txt
+KingBird/NETBOOST.txt
+KingBird/NETPLAY.txt
+KingBird/pf/menu3/dnet.cmnu
+KingBird/pf/sound/netplaylist/
+KingBird/pf/movie/Conference.thp
+KingBird/Source/Netplay/Net-CodeMenu.asm
+KingBird/Source/Netplay/Net-MultiGCT.asm
+KingBird/Source/Netplay/Net-MyMusic.asm
+KingBird/Source/Netplay/Net-Replays.asm
+KingBird/Source/Netplay/Net-StageFiles.asm
