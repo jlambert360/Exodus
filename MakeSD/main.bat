@@ -47,6 +47,18 @@ echo BOOST.GCT
 echo ########################################################################################################################
 "%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\Project+\GCTRealMate.exe" -q "%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\Project+\BOOST.txt"
 
+echo:
+echo ########################################################################################################################
+echo NETPLAY.GCT
+echo ########################################################################################################################
+"%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\Project+\GCTRealMate.exe" -q "%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\Project+\NETPLAY.txt"
+
+echo:
+echo ########################################################################################################################
+echo NETBOOST.GCT
+echo ########################################################################################################################
+"%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\Project+\GCTRealMate.exe" -q "%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\Project+\NETBOOST.txt"
+
 ::timeout /t %MIN_EXEC_TIME% /nobreak > NUL
 
 call unmount.bat || goto error
