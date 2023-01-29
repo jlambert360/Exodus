@@ -82,6 +82,39 @@ byte 50 		    @ $80692DA7
 byte 50 		    @ $80692507
 byte[4] 0x30, 0x34, 0x64, 0 @ $806A17D8
 
+################################################################
+[Brawl-Themed P+] Stage Select Screen Supports 50CC [QuickLava]
+################################################################
+# Stage Select Stock Icons 50CC Fix
+HOOK @ $806b2ffc
+{
+  	cmpwi r25, 0x36;   bne+ notWarioman		# 0x36 isn't a mistake.
+ 	li r3, 9000; b %END%					# Not sure why it's not 0x35 like in the above codes.
+notWarioman:
+ 	mulli r3, r3, 50
+}
+# Stage Select Random Player Stock Icons Fix
+HOOK @ $806b2fdc
+{
+	lis r12, 0x40C1				# \
+	ori r12, r12, 0xAD80		# | Write first word worth of 9051 into memory
+	stw r12, 0x08(r1)			# | Store it at 0x08(r1)
+	li r12, 0x00				# | Zero out r12
+	stw r12, 0x0C(r1)			# | Store it at 0x0C(r1)
+	lfd f0, 0x08(r1)			# / Load it into fr0, overwriting the normal 501.
+	fsubs f1,f1,f2				# Restore original instruction.
+}
+# Stage Select Random CPU Stock Icons Fix
+HOOK @ $806b2fe8
+{
+	lis r12, 0x40C1				# \
+	ori r12, r12, 0xAF80		# | Write first word worth of 9055 into memory
+	stw r12, 0x08(r1)			# | Store it at 0x08(r1)
+	li r12, 0x00				# | Zero out r12
+	stw r12, 0x0C(r1)			# | Store it at 0x0C(r1)
+	lfd f31, 0x08(r1)			# / Load it into fr31, overwriting the normal 505.
+}
+
 ###################################################################
 [Legacy TE] Upload Character Masquerade Data At Startup [DukeItOut]
 ###################################################################
